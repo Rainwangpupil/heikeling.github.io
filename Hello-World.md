@@ -22,7 +22,7 @@ int main(){
 
 C:
 
-```C
+```c
 # include<stdio.h>
 
 int main(){
