@@ -13,6 +13,109 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+            html body {
+                margin: 0px;
+                padding: 0px;
+            }
+    
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+    
+    
+            /* 文本渐变色 */
+            .gradient-text {
+                background-image: linear-gradient(90deg, #f66, #f90);
+                -webkit-background-clip: text;
+                background-clip: text;
+                font-size: 38px;
+                -webkit-animation: hue 5s linear infinite;
+                animation: hue 5s linear infinite;
+                -webkit-text-fill-color: transparent;
+            }
+    
+            @keyframes hue {
+                from {
+                    filter: hue-rotate(0);
+                }
+    
+                to {
+                    filter: hue-rotate(-1turn);
+                }
+            }
+        </style>
+    
+
+</head>
+<body background="https://img0.baidu.com/it/u=3028976837,1665106819&fm=253&fmt=auto&app=138&f=JPEG?w=749&h=500">
+	    <div class="container">
+	        <p class="gradient-text">/* <span class="text"></span> */</p>
+	    </div>
+</body>
+<script>
+
+    var array = [
+        'python博主',
+        '黑客零'
+    ]
+
+    let con = document.getElementsByClassName('text')[0]
+
+    async function Init() {
+        for (let i = 0; i < array.length; i++) {
+            const item = array[i];
+            await start(item)
+            await back(item)
+        }
+    }
+
+    function start(item) {
+        return new Promise((resolve, reject) => {
+            var index = 0;
+            var start_timer = setInterval(function () {
+                con.append(item.charAt(index));
+                if (index++ === item.length) {
+                    clearInterval(start_timer)
+                    resolve();
+                }
+            }, 100);
+        })
+    }
+
+    function back(item) {
+        return new Promise((resolve, reject) => {
+            var del_timer = setInterval(function () {
+                item = item.slice(0, -1);
+                con.innerHTML = item;
+                if (con.innerHTML.toString().length == 0) {
+                    clearInterval(del_timer)
+                    resolve();
+                }
+            }, 50);
+        })
+    }
+
+    Init()
+</script>
+<style>
+.button {
+    background-color: #4CAF50; /* 绿色 */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
 </head>
 <body>
 <header class="lyear-header text-center" style="background-image:url(images/left-bg.jpg);">
@@ -109,7 +212,7 @@ pyinstaller最重要的两个参数就是-F与-D参数
 
 使用-F参数，当生成程序完成后，将会在此 app 目录下看到多了一个 dist 目录，并在该目录下看到有一个 app.exe 文件，这就是使用 PyInstaller 工具生成的 EXE 程序。
 
-使用-D参数，pyinstaller会将python脚步打包成一个文件夹，运行程序时，需要进入该文件夹，点击运行相应的可执行程序（默认选项）
+使用-D参数，pyinstaller会将python脚步打包成一个文件夹，运行程序时，需要该文件夹，点击运行相应的可执行程序（默认选项）
 
 使用-D参数，将会在 app 目录下看到多了一个 dist 目录，并在该目录下看到有一个 app 子目录，在该子目录下包含了大量 .dll 文件和 .pyz 文件，它们都是 app.exe 程序的支撑文件。
 
