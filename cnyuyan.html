@@ -1,5 +1,5 @@
 <html>
-	<body>
+	<body bgcolor="#E6E6FA">
 <textarea name="TextBox1" rows="40" cols="60" id="dm">打印：你好，世界</textarea>
 
 		<script language="javascript">
@@ -8,7 +8,7 @@
 			var yyy = xxx.value.split("\n");
 			for(var i = 0;i < yyy.length;i++){
 			dm = yyy[i]
-			if(dm.indexOf("打印：获得答复") !== -1)
+			if(dm.indexOf("打印获得答复") !== -1)
 			{
 				alert(df)
 			}
@@ -33,4 +33,94 @@
 		</script>
 		<button type="button" onclick="testGG()">运行</button>
 	</body>
+	<style>
+	            html body {
+	                margin: 0px;
+	                padding: 0px;
+	            }
+	    
+	            .container {
+	                display: flex;
+	                justify-content: center;
+	                align-items: center;
+	                height: 100vh;
+	            }
+	    
+	    
+	            /* 文本渐变色 */
+	            .gradient-text {
+	                background-image: linear-gradient(90deg, #f66, #f90);
+	                -webkit-background-clip: text;
+	                background-clip: text;
+	                font-size: 38px;
+	                -webkit-animation: hue 5s linear infinite;
+	                animation: hue 5s linear infinite;
+	                -webkit-text-fill-color: transparent;
+	            }
+	    
+	            @keyframes hue {
+	                from {
+	                    filter: hue-rotate(0);
+	                }
+	    
+	                to {
+	                    filter: hue-rotate(-1turn);
+	                }
+	            }
+	        </style>
+	    
+	
+	</head>
+	<body background="https://img0.baidu.com/it/u=3028976837,1665106819&fm=253&fmt=auto&app=138&f=JPEG?w=749&h=500">
+		    <div class="container">
+		        <p class="gradient-text">/* <span class="text"></span> */</p>
+		    </div>
+	</body>
+	<script>
+	
+	    var array = [
+	'cn全中文编程语言',
+	'`让所有人都会编程`'
+
+	    ]
+	
+	    let con = document.getElementsByClassName('text')[0]
+	
+	    async function Init() {
+	        for (let i = 0; i < array.length; i++) {
+	            const item = array[i];
+	            await start(item)
+	            await back(item)
+	        }
+	    }
+	
+	    function start(item) {
+	        return new Promise((resolve, reject) => {
+	            var index = 0;
+	            var start_timer = setInterval(function () {
+	                con.append(item.charAt(index));
+	                if (index++ === item.length) {
+	                    clearInterval(start_timer)
+	                    resolve();
+	                }
+	            }, 100);
+	        })
+	    }
+	
+	    function back(item) {
+	        return new Promise((resolve, reject) => {
+	            var del_timer = setInterval(function () {
+	                item = item.slice(0, -1);
+	                con.innerHTML = item;
+	                if (con.innerHTML.toString().length == 0) {
+	                    clearInterval(del_timer)
+	                    resolve();
+	                }
+	            }, 50);
+	        })
+	    }
+	
+	    Init()
+		
+	</script>
 </html>
