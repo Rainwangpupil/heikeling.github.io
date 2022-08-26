@@ -1,0 +1,36 @@
+<html>
+	<body>
+<textarea name="TextBox1" rows="40" cols="60" id="dm">打印：你好，世界</textarea>
+
+		<script language="javascript">
+			function testGG(){
+			var xxx = document.getElementById("dm");
+			var yyy = xxx.value.split("\n");
+			for(var i = 0;i < yyy.length;i++){
+			dm = yyy[i]
+			if(dm.indexOf("打印：获得答复") !== -1)
+			{
+				alert(df)
+			}
+			if(dm.indexOf("打印：") !== -1)
+			{
+				var dy = dm.replace('打印：', '');
+				alert(dy)
+			}
+			if(dm.indexOf("询问：") !== -1)
+			{
+			var xw = dm.replace('询问：', '');
+			df = prompt(xw)
+			}
+			if(dm.indexOf("弹出：") !== -1)
+			{
+			var x = dm.replace('弹出：', '');
+			confirm(x)
+			}
+			}
+			}
+		
+		</script>
+		<button type="button" onclick="testGG()">运行</button>
+	</body>
+</html>
