@@ -1,0 +1,10 @@
+<html>
+	<body>
+		<title>双叶科技</title>
+		<h1>欢迎来到双叶科技</h1>
+		<h2>我们的产品</h2>
+		<p>|</p>
+		<p>|</p>
+		<input type="button" value="cn编程语言" onclick="javascript:window.location.href='https://heikeling.github.io/cnindex'"/>
+	</body>
+</html>
