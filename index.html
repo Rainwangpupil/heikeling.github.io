@@ -1,391 +1,65 @@
-
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>黑客零的博客</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<meta name="author" content="yinqi" />
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css" />
-<link rel="stylesheet" type="text/css" href="css/style.min.css" />
-<html>
-
-<head></head>
-
-<body>
-
-
-    <div id="mydiv">
-        <div id="mydivheader">小广告~~</div>
-        <a class="nav-link" href="cnindex.html">cn语言</a>
-    </div>
-    <style>
-        #mydiv {
-            position: absolute;
-            z-index: 9;
-            background-color: #f1f1f1;
-            text-align: center;
-            border: 1px solid #d3d3d3;
-        }
-        
-        #mydivheader {
-            padding: 10px;
-            cursor: move;
-            z-index: 10;
-            background-color: #2196F3;
-            color: #fff;
-        }
-    </style>
-
-    <script>
-        //Make the DIV element draggagle:
-        dragElement(document.getElementById(("mydiv")));
-        
-        function dragElement(elmnt) {
-          var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-          if (document.getElementById(elmnt.id + "header")) {
-            /* if present, the header is where you move the DIV from:*/
-            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-          } else {
-            /* otherwise, move the DIV from anywhere inside the DIV:*/
-            elmnt.onmousedown = dragMouseDown;
-          }
-        
-          function dragMouseDown(e) {
-            e = e || window.event;
-            // get the mouse cursor position at startup:
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            document.onmouseup = closeDragElement;
-            // call a function whenever the cursor moves:
-            document.onmousemove = elementDrag;
-          }
-        
-          function elementDrag(e) {
-            e = e || window.event;
-            // calculate the new cursor position:
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            // set the element's new position:
-            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-          }
-        
-          function closeDragElement() {
-            /* stop moving when mouse button is released:*/
-            document.onmouseup = null;
-            document.onmousemove = null;
-          }
-        }
-    </script>
-</body>
-<body>
-
-<header class="lyear-header text-center" style="background-image:url(images/left-bg.jpg);">
-  <div class="lyear-header-container">
-    <div class="lyear-mask"></div>
-    <h1 class="lyear-blogger pt-lg-4 mb-0"><a href="index.html">黑客零</a></h1>
-    <nav class="navbar navbar-expand-lg">
-    <a class="navbar-toggler" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="lyear-hamburger">
-        <div class="hamburger-inner"></div>
-      </div>
-    </a>
-    
-    <div id="navigation" class="collapse navbar-collapse flex-column">
-	  <div class="profile-section pt-3 pt-lg-0">
-	    <img class="profile-image mb-3 rounded-circle mx-auto" src="images/lyear.png" width="120" height="120" alt="黑客零" >
-	    <div class="lyear-sentence mb-3">必须记住我们学习的时间是有限的。时间有限，不只由于人生短促，更由于人事纷繁。我们就应力求把我们所有的时间用去做最有益的事情。</div>
-        <hr>
-	  </div>
-	  <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-	  <ul class="navbar-nav flex-column text-center">
-	    <li class="nav-item active">
-         <li class="nav-item">
-	      <a class=“nav-link” href=cnindex.html>cn语言官网</>
-	    </li>
-          <a class="nav-link" href="index.html">首页</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="snake.html">游戏贪吃蛇</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="dmy.html">代码雨</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="https://wwb.lanzouy.com/i7SHn09hzm6f">cn编程语言密码3b5g</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="https://wwb.lanzouy.com/iuyNb09jjo8f">安卓版自制消消乐密码8dyf</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="https://wwb.lanzouy.com/iq39O09jjo6d">苹果版自制消消乐密码esbt</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="https://wwb.lanzouy.com/in1Uo09i12vc">vbs代码库</a>
-	    </li>
-            <li class="nav-item">
-	      <a class="nav-link" href="bd.html">病毒模拟器</a>
-	    </li>
-            <li class="nav-item">
-	      <a class="nav-link" href="dl.html">登录界面模板</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="https://blog.csdn.net/weixin_67782151">更多文章</a>
-	    </li>
-	  </ul>
-	  
-	  <div class="my-2 my-md-3">
-        <form class="lyear-search-form form-inline justify-content-center pt-3">
-          <input type="email" id="semail" name="semail1" class="form-control mr-md-1" placeholder="搜索关键词" />
-        </form>
-	  </div>
-	</div>
-  </nav>
-  </div>
-</header>
-<div class="lyear-wrapper">
-  <section class="mt-5 pb-5">
-    <div class="container">
-
-      <div class="row">
-        <!-- 文章列表 -->
-        <div class="col-xl-8">
-
-          <article class="lyear-arc">
-            <div class="arc-header">
-              <h2 class="arc-title"><a href="post.html">pyinstaller常见问题</a></h2>
-              <ul class="arc-meta">
-                <li><i class="mdi mdi-calendar"></i> 2019-09-25 09:21</li>
-                <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">蔚来汽车</a>, <a href="#">财报</a></li>
-                <li><i class="mdi mdi-comment-multiple-outline"></i> <a href="#">3 评论</a></li>
-              </ul>
-            </div>
-
-            <div class="arc-synopsis">
-              <p>Pyinstaller是python程序打包的一个工具，pyinstaller本身可以跨平台使用，但这里的跨平台指的是pyinstaller本身，通过pyinstaller打包出来的文件是无法跨平台的，在MacOS下使用pyinstaller打包python程序，打包后的内容只可在MacOS下运行，在windwos下打包的python程序，只可在Windows下运行。
-
-Pyinstaller的使用
-PyInstaller 工具的命令语法如下：
-
-pyinstaller 选项 Python 源文件
-
-有关参数解释如下：
-
-pyinstaller最重要的两个参数就是-F与-D参数
-
-使用-F参数，pyinstaller会将python脚本打包成单个exe文件
-
-使用-F参数，当生成程序完成后，将会在此 app 目录下看到多了一个 dist 目录，并在该目录下看到有一个 app.exe 文件，这就是使用 PyInstaller 工具生成的 EXE 程序。
-
-使用-D参数，pyinstaller会将python脚步打包成一个文件夹，运行程序时，需要该文件夹，点击运行相应的可执行程序（默认选项）
-
-使用-D参数，将会在 app 目录下看到多了一个 dist 目录，并在该目录下看到有一个 app 子目录，在该子目录下包含了大量 .dll 文件和 .pyz 文件，它们都是 app.exe 程序的支撑文件。
-
-另有如下参数以及含义：
-
--h，--help    查看该模块的帮助信息
--F，-onefile    产生单个的可执行文件
--D，--onedir    产生一个目录（包含多个文件）作为可执行程序
--a，--ascii    不包含 Unicode 字符集支持
--d，--debug    产生 debug 版本的可执行文件
--w，--windowed，--noconsolc    指定程序运行时不显示命令行窗口（仅对 Windows 有效）
--c，--nowindowed，--console    指定使用命令行窗口运行程序（仅对 Windows 有效）
--o DIR，--out=DIR    指定 spec 文件的生成目录。如果没有指定，则默认使用当前目录来生成 spec 文件
--p DIR，--path=DIR    设置 Python 导入模块的路径（和设置 PYTHONPATH 环境变量的作用相似）。也可使用路径分隔符（Windows 使用分号，Linux 使用冒号）来分隔多个路径
--n NAME，--name=NAME    指定项目（产生的 spec）名字。如果省略该选项，那么第一个脚本的主文件名将作为 spec 的名字
-这里需要重点关注一下-w ，使用了这个参数后当运行.exe文件时不会在弹出黑色窗口。
-
-另外当我们需要在软件的左上方加上自己设置的图标时就需要利用如下语句：
-
-pyinstall -i xxx.ico -n xxx -w -D entrance.py
-上面基本上就是利用Pyinstaller对python程序打包的基本方法。
-
-下面再说一下自己需要的一下问题，首先如果利用了上述语句对项目进行打包，发现xxx.ico的图标无法显示在运行的程序上，可以尝试将图片文件放置于和entrance.exe同级目录下运行。
-
-另外在使用参数-D进行打包时如果发现确实.pyc文件，即可去相应的原项目文件夹的_pycache_文件夹下找到并放入与entrace.exe同级的新建目录内，再次运行即可。
-</p>
-            </div>
-          </article>
-
-          <article class="lyear-arc">
-            <div class="arc-header">
-              <h2 class="arc-title"><a href="post.html">bat入门</a></h2>
-              <ul class="arc-meta">
-                <li><i class="mdi mdi-calendar"></i> 2019-09-25 09:20</li>
-                <li><i class="mdi mdi-tag-text-outline"></i> <a href="#"></a>, <a href="#">Apple</a></li>
-                <li><i class="mdi mdi-comment-multiple-outline"></i> <a href="#"></a></li>
-              </ul>
-            </div>
-
-            <div class="arc-preview">
-              <a href="#"><img src="images/blog/post-1.png" alt="" class="img-fluid rounded"></a>
-            </div>
-
-            <div class="arc-synopsis">
-              <p>bat 是batch的缩写，直译为批处理。bat文件是存在于dos/windows中的脚本文件，bat的直接操作对象是dos命令，dos命令是system32下的exe或者cmd可执行程序的子集，长驻于内存中，具有简单、处理速度快的特点，取名为批处理毫无争议，也是非图形shell在windows操作系统中的直接体现，可以使用文本编辑器编写，保存为.bat格式。
-
-bat的基本组成部分有数据类型、关键字、特殊符号、控制语句、命令、命令嵌套等。编制完整的bat脚本需要记忆较多的关键字、特殊符号，命令。当然，命令可以使用帮助查看。之后就是这些基本组成部分的搭配使用了。
-
-一、开始 hello  world
-
-未能免俗，以hello  world 开始。
-
-@echo off 
-echo hello  world
-Pause
-
-关键字echo 在DOS屏幕上有打印输出的功能，相当于高级编程语言的print()，参数有on,off。on 表示在从下一行开始命令行显示，off表示从下一行开始关闭命令行显示。
-
-而关键字@则是关闭当前命令行显示的意思。
-
-关键字pause表示DOS屏幕上暂停等待用户下一步操作。
-
-echo  hello the world
-@echo  hello the world
-
-echo off 
-set var=this is my first program
-set var=thanks
-
-echo  on 
-set var=hello the wold again
-set var=this is my first program again 
-set var=thanks again
-Pause
-————————————————
-版权声明：本文为CSDN博主「黑I客I零」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/weixin_67782151/article/details/125107562</p>
-            </div>
-          </article>
-
-          <article class="lyear-arc">
-            <div class="arc-header">
-              <ul class="arc-meta">
-                <li><i class="mdi mdi-calendar"></i> 2019-09-25 09:19</li>
-                <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">比特币</a>, <a href="#">韭菜</a></li>
-                <li><i class="mdi mdi-comment-multiple-outline"></i> <a href="#">90 评论</a></li>
-              </ul>
-            </div>
-
-            <div class="arc-synopsis">
-              <p>本周二，比特币迎来了一轮暴跌，根据行情显示，比特币今日凌晨曾一度跌破 8000 美元，现报约8723美元，恐怕这让一大波韭菜们相当扎心。 </p>
-            </div>
-          </article>
-
-          <article class="lyear-arc">
-            <div class="arc-header">
-              <h2 class="arc-title"><a href="post.html">数十万 PhpStudy 用户被植入后门，快来检测你是否已沦为“肉鸡”！</a></h2>
-              <ul class="arc-meta">
-                <li><i class="mdi mdi-calendar"></i> 2019-09-24 09:57</li>
-                <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">PhpStudy</a></li>
-                <li><i class="mdi mdi-comment-multiple-outline"></i> <a href="#">115 评论</a></li>
-              </ul>
-            </div>
-
-            <div class="arc-preview">
-              <a href="#"><img src="images/blog/post-2.jpg" alt="" class="img-fluid rounded"></a>
-            </div>
-
-            <div class="arc-synopsis">
-              <p>北京时间9月20日，杭州公安发布《杭州警方通报打击涉网违法犯罪暨‘净网2019’专项行动战果》一文，文章曝光了国内知名PHP调试环境程序集成包“PhpStudy软件”遭到黑客篡改并植入“后门”。截...</p>
-            </div>
-          </article>
-
-          <article class="lyear-arc">
-            <div class="arc-header">
-              <h2 class="arc-title"><a href="post.html">效力微软 15 年的前员工解释 Windows 10 为什么问题如此多</a></h2>
-              <ul class="arc-meta">
-                <li><i class="mdi mdi-calendar"></i> 2019-09-24 07:52</li>
-                <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">windows</a>, <a href="#">win10</a></li>
-                <li><i class="mdi mdi-comment-multiple-outline"></i> <a href="#">26 评论</a></li>
-              </ul>
-            </div>
-
-            <div class="arc-synopsis">
-              <p>众所周知 Windows 10 系统问题频发，整体来说稳定性比较差，然而在此之前的版本其实相对来说稳定性还挺好的。自从 Windows 10 正式版推出之时，该系统就开始频繁出现问题，乃至现在每个月安全...</p>
-            </div>
-          </article>
-
-          <!-- 分页 -->
-          <div class="row">
-            <div class="col-lg-12">
-              <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#"><i class="mdi mdi-chevron-left"></i></a></li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item"><a class="page-link" href="#"><i class="mdi mdi-chevron-right"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- 分页 end -->
-        </div>
-        <!-- 内容 end -->
-
-        <!-- 侧边栏 -->
-        <div class="col-xl-4">
-          <div class="lyear-sidebar">
-            <!-- 热门文章 -->
-            <aside class="widget widget-hot-posts">
-              <div class="widget-title">热门文章</div>
-              <ul>
-                <li>
-                  <a href="#">三星将为 Galaxy Fold 用户提供 149 美元更换屏幕服务</a> <span>2019-09-25 10:05</span>
-                </li>
-                <li>
-                  <a href="#">专家：10年后6G将问世 数据传输速率有望比5G快100倍</a> <span>2019-09-25 08:06</span>
-                </li>
-                <li>
-                  <a href="#">苹果正式发布 iPadOS 13.1 系统，加入多项强大新功能</a> <span>2019-09-25 09:35</span>
-                </li>
-              </ul>
-            </aside>
-
-            <!-- 归档 -->
-            <aside class="widget">
-              <div class="widget-title">归档</div>
-              <ul>
-                <li><a href="#">2019 三月</a> (40)</li>
-                <li><a href="#">2019 四月</a> (08)</li>
-                <li><a href="#">2019 五月</a> (11)</li>
-                <li><a href="#">2019 六月</a> (21)</li>
-              </ul>
-            </aside>
-
-            <!-- 标签 -->
-            <aside class="widget widget-tag-cloud">
-              <div class="widget-title">标签</div>
-              <div class="tag-cloud">
-                <a href="#" class="badge badge-light">php</a>
-                <a href="#" class="badge badge-primary">苹果</a>
-                <a href="#" class="badge badge-danger">比特币</a>
-                <a href="#" class="badge badge-light">linux</a>
-                <a href="#" class="badge badge-light">前端</a>
-                <a href="#" class="badge badge-light">vue</a>
-              </div>
-            </aside>
-          </div>
-        </div>
-        <!-- 侧边栏 end -->
-      </div>
-
-    </div>
-    <!-- end container -->
-  </section>
-</div>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/main.min.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0px;
+			}
+			.zhezhao{
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				background: #000;
+				width: 100%;
+				height: 100%;
+				opacity: 0.5;
+			}
+			.tankuang{
+				position: relative;
+				background: #fff;
+				width: 50%;
+				height: 80%;
+				border-radius: 5px;
+				margin: 5% auto;
+			}
+			#header{
+				height: 40px;
+			}
+			#header-right{
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				border-radius: 5px;
+				background: red;
+				color: #fff;
+				right: 5px;
+				top: 5px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<button type="button" onclick="dianwo()">点我</button>
+		<div class="zhezhao" id='zhezhao'>
+			<div class="tankuang">
+				<div id="header">
+					<span>温馨提示</span>
+					<div id="header-right" onclick="hidder()">x</div>
+				</div>
+			<font color="red" size="10" ><u><p align="center"><a href="https://heikeling.github.io/cnindex">点击跳转cn语言官网</a></p></u></font>
+			<font color="red" size="10" ><u><p align="center"><a href="https://blog.csdn.net/weixin_67782151">博客</a></p></u></font>
+			</div>
+		</div>
+		<script type="text/javascript">
+			document.getElementById('zhezhao').style.display="none";
+			function dianwo(){
+				document.getElementById('zhezhao').style.display="";
+			}
+			function hidder(){
+				document.getElementById('zhezhao').style.display="none";
+			}
+		</script>
+	</body>
 </html>
